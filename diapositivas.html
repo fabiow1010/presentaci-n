@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación: Propuesta de Diseño de Red de Telecomunicaciones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        .slide {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1024px;
+            height: 576px;
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+            position: relative;
+        }
+
+        .slide-content {
+            flex-grow: 1;
+            padding: 40px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .slide-footer {
+            padding: 16px 48px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 14px;
+            color: #6b7280;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f9fafb;
+            flex-shrink: 0;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #111827;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1f2937;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            margin-top: 12px;
+            margin-bottom: 6px;
+        }
+
+        p,
+        li {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+
+        .table-container {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        th,
+        td {
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+            color: #374151;
+            font-size: 14px;
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .nav-button {
+            background-color: #3b82f6;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .nav-button:hover {
+            background-color: #2563eb;
+        }
+
+        .nav-button:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        .image-placeholder {
+            border: 2px dashed #d1d5db;
+            background-color: #f9fafb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #6b7280;
+            font-style: italic;
+            border-radius: 8px;
+            height: 150px;
+            margin-top: 1rem;
+        }
+
+        .justify-text {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="presentation-container">
+        <!-- Diapositiva 1: Portada -->
+        <section class="slide" id="slide-1">
+            <div class="slide-content text-center justify-center items-center">
+                <h1 class="text-5xl font-extrabold text-gray-800 leading-tight">Propuesta de Diseño de una Red de
+                    Alimentación de Telecomunicaciones</h1>
+                <p class="mt-4 text-xl text-gray-600">Análisis Topológico y Catastro de Redes Conforme a Estándares
+                    Nacionales e Internacionales</p>
+                <div class="mt-10 text-gray-500">
+                    <p class="font-semibold">Presentado por:</p>
+                    <p>Natalia Gómez, Fabian Fernández, Cristian Delgado, Cristhian Cante</p>
+                    <p class="mt-4 font-bold">21 de Junio de 2025</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Taller N° 4: Servicios Públicos Domiciliarios</span>
+                <span id="slide-number-1">1 / 11</span>
+            </div>
+        </section>
+
+        <!-- Diapositiva 2: Introducción y Objetivos -->
+        <section class="slide hidden" id="slide-2">
+            <div class="slide-content">
+                <h2>Introducción y Objetivos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3>Introducción</h3>
+                        <p class="justify-text">Las redes de telecomunicaciones son un eje fundamental de la sociedad
+                            contemporánea. Este proyecto presenta una propuesta de diseño para una red de alimentación,
+                            garantizando un servicio viable, eficiente y sostenible mediante un riguroso análisis
+                            topológico y catastral.</p>
+                    </div>
+                    <div>
+                        <h3>Objetivo General</h3>
+                        <p class="justify-text">Diseñar un sistema de redes de telecomunicaciones eficiente, viable y
+                            conforme al marco técnico y jurídico que rige el servicio, basado en un análisis topológico
+                            del territorio y los estándares de la industria.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Taller N° 4: Servicios Públicos Domiciliarios</span>
+                <span id="slide-number-2">2 / 11</span>
+            </div>
+        </section>
+
+        <!-- Diapositiva 3: Marco Normativo y Técnico -->
+        <section class="slide hidden" id="slide-3">
+            <div class="slide-content">
+                <h2>Fundamento del Diseño: Cumplimiento Normativo</h2>
+                <p class="mb-6 justify-text">La factibilidad y sostenibilidad de nuestro diseño se garantiza a través
+                    del estricto cumplimiento de un marco normativo dual, que integra los requisitos locales con las
+                    mejores prácticas internacionales.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-blue-600">Normatividad Nacional (Colombia)</h3>
+                        <ul class="space-y-2">
+                            <li><strong>Ley 1341/2009 y 1978/2019:</strong> Establecen principios de Neutralidad
+                                Tecnológica y Acceso Universal.</li>
+                            <li><strong>Resolución CRC 6771 (RITEL):</strong> Define las especificaciones para la
+                                infraestructura interna, dictando los puntos de conexión obligatorios (Cámaras de
+                                Entrada, SETI/SETU).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-blue-600">Estándares Internacionales (UIT-T)</h3>
+                        <ul class="space-y-2">
+                            <li><strong>Rec. ITU-T L.250:</strong> Guía maestra para definir las topologías de la red de
+                                acceso.</li>
+                            <li><strong>Rec. ITU-T L.89:</strong> Estándar de ingeniería para el diseño de
+                                infraestructura aérea.</li>
+                            <li><strong>Rec. ITU-T L.11:</strong> Guía para el diseño de infraestructura
+                                subterránea.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="mt-6 p-4 bg-blue-50 border border-blue-200 text-blue-800 rounded-lg text-center font-medium">
+                    Nuestro diseño es la aplicación directa de estándares globales adaptados al contexto regulatorio
+                    colombiano.</p>
+            </div>
+            <div class="slide-footer">
+                <span>Taller N° 4: Servicios Públicos Domiciliarios</span>
+                <span id="slide-number-3">3 / 11</span>
+            </div>
+        </section>
+
+        <!-- Diapositiva 4: Capa Poligonal -->
+        <section class="slide hidden" id="slide-4">
+            <div class="slide-content">
+                <h2>Conceptualización GIS: Capas Poligonales</h2>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="mt-0">Capa: `Recintos_Red`</h3>
+                        <p class="justify-text">¿Qué es? Representa las áreas físicas que actúan como origen o
+                            destino de la red de alimentación. Son los centros neurálgicos donde se alojan los equipos
+                            activos.</p>
+                        <p class="mt-2 justify-text">Justificación Técnica: Permite ubicar geográficamente los
+                            puntos de concentración de la red, facilitando la planificación de rutas y la gestión de
+                            activos.</p>
+                    </div>
+                    <div class="table-container">
+                        <table class="w-full">
+                            <thead>
+                                <tr>
+                                    <th>Subtipo</th>
+                                    <th>Función y Ubicación</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Oficina Central (CO)</strong></td>
+                                    <td>Origen de la red del proveedor. Se ubica en una manzana específica.</td>
+                                </tr>
+                                <tr class="border-b-0">
+                                    <td><strong>Recinto Equipos (SETI/SETU)</strong></td>
+                                    <td>Destino de la red y punto de conexión con el edificio (según RITEL). Se ubica
+                                        dentro de un predio.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h3 class="mt-4">Campos Principales (`Recintos_Red`)</h3>
+                <ul class="text-sm space-y-1">
+                    <li>`ID_Recinto`: Identificador único.</li>
+                    <li>`Tipo_Recinto`: Dominio con los subtipos (CO, SETI/SETU).</li>
+                    <li>`Propietario`: Nombre del proveedor o del inmueble.</li>
+                    <li>`Direccion`: Dirección postal del recinto.</li>
+                </ul>
+            </div>
+            <div class="slide-footer">
+                <span>Taller N° 4: Servicios Públicos Domiciliarios</span>
+                <span id="slide-number-4">4 / 11</span>
+            </div>
+        </section>
+
+        <!-- Diapositiva 5: Capa Puntual -->
+        <section class="slide hidden" id="slide-5">
+            <div class="slide-content">
+                <h2>Conceptualización GIS: Capas Puntuales</h2>
+                <div>
+                    <h3 class="mt-0">Capa: `Infraestructura_Soporte_Aereo`</h3>
+                    <p class="text-sm justify-text">¿Qué es y por qué? Modela la infraestructura vertical que
+                        soporta el cableado aéreo. Es crucial para el análisis de cargas y seguridad según la **Rec.
+                        ITU-T L.89**.</p>
+                    <p class="text-sm justify-text">Subtipos y Función:<strong>Postes</strong> (Intermedio,
+                        Esquina, Terminal) para sostener el cable, y <strong>Anclajes de Viento</strong> para dar
+                        estabilidad estructural.</p>
+                </div>
+                <div class="mt-3">
+                    <h3 class="mt-0">Capa: `Nodos_Pasivos_Red`</h3>
+                    <p class="text-sm justify-text">¿Qué es y por qué? Modela los puntos de conexión y derivación
+                        donde se manipula el cableado. Esencial para gestionar la topología lógica y física de la red.
+                    </p>
+                    <p class="text-sm justify-text">Subtipos y Función: <strong>Cajas de Empalme</strong> para unir
+                        cables, <strong>NAP</strong> para derivar a usuarios, y <strong>Cámaras
+                            (Entrada/Enlace)</strong> para la gestión de ductos subterráneos según RITEL.</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Taller N° 4: Servicios Públicos Domiciliarios</span>
+                <span id="slide-number-5">5 / 11</span>
+            </div>
+        </section>
+
+        <!-- Diapositiva 6: Capa Lineal -->
+        <section class="slide hidden" id="slide-6">
+            <div class="slide-content">
+                <h2>Conceptualización GIS: Capas Lineales</h2>
+                <div>
+                    <h3 class="mt-0">Capa: `Rutas_Canalizacion`</h3>
+                    <p class="text-sm justify-text">¿Qué es y por qué? Representa la obra civil (ductos, zanjas,
+                        tendidos aéreos) por donde viajan los cables. Permite gestionar la capacidad y ocupación de la
+                        infraestructura física.</p>
+                    <p class="text-sm justify-text">Subtipos y Función:<strong>Aérea</strong> (entre postes) y
+                        <strong>Subterránea</strong> (en zanjas o ductos). Su diseño se rige por ITU-T L.89 y L.11.</p>
+                </div>
+                <div class="mt-3">
+                    <h3 class="mt-0">Capa: `Red_Cableado`</h3>
+                    <p class="text-sm justify-text">¿Qué es y por qué? Modela el cable de telecomunicaciones como
+                        tal. Es la capa que transporta la señal y define la capacidad de la red.</p>
+                    <p class="text-sm justify-text">Subtipos y Función: <strong>Cable de
+                            Alimentación/Distribución</strong> (fibra, cobre), <strong>Cable de Suspensión</strong> y
+                        <strong>Viento</strong> para el soporte mecánico en rutas aéreas.</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Taller N° 4: Servicios Públicos Domiciliarios</span>
+                <span id="slide-number-6">6 / 11</span>
+            </div>
+        </section>
+
+        <!-- Diapositiva 7: Dominios -->
+        <section class="slide hidden" id="slide-7">
+            <div class="slide-content">
+                <h2>Estandarización de Datos: Dominios de Atributos</h2>
+                <p class="mb-4 justify-text">Para garantizar la integridad y consistencia de los datos, se han definido
+                    dominios (listas de valores permitidos) para campos clave, basados en las especificaciones
+                    normativas.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                    <div>
+                        <h3 class="text-blue-600">Dominio: `Material` (Postes)</h3>
+                        <ul class="text-sm">
+                            <li>Acero</li>
+                            <li>Concreto Reforzado</li>
+                            <li>Madera</li>
+                        </ul>
+                        <p class="text-xs italic mt-1">Justificación: Especificado en ITU-T L.89, Cláusula 9.1.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-blue-600">Dominio: `Medio` (Cableado)</h3>
+                        <ul class="text-sm">
+                            <li>Fibra Óptica</li>
+                            <li>Par de Cobre</li>
+                            <li>Cable Coaxial</li>
+                            <li>Híbrido (Óptico/Metálico)</li>
+                        </ul>
+                        <p class="text-xs italic mt-1">Justificación: Basado en tecnologías soportadas por RITEL y la
+                            serie L.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-blue-600">Dominio: `Metodo_Instalacion` (Rutas)</h3>
+                        <ul class="text-sm">
+                            <li>Aéreo (en Postes)</li>
+                            <li>Subterráneo (Zanja Tradicional)</li>
+                            <li>Subterráneo (Microzanja)</li>
+                        </ul>
+                        <p class="text-xs italic mt-1">Justificación: Técnicas de obra civil estandarizadas en ITU-T
+                            L.11, L.49, L.89.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-blue-600">Dominio: `Ubicacion` (Nodos Pasivos)</h3>
+                        <ul class="text-sm">
+                            <li>Subterránea (en Cámara)</li>
+                            <li>Aérea (en Poste)</li>
+                            <li>En Fachada (o Muro)</li>
+                            <li>Dentro de Recinto</li>
+                        </ul>
+                        <p class="text-xs italic mt-1">Justificación: Lugares de instalación comunes descritos en L.250
+                            y EN 50174-3.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Taller N° 4: Servicios Públicos Domiciliarios</span>
+                <span id="slide-number-7">7 / 11</span>
+            </div>
+        </section>
+
+        <!-- Diapositiva 8: Lógica de la Infraestructura -->
+        <section class="slide hidden" id="slide-8">
+            <div class="slide-content">
+                <h2>Flujo de la Red: Desde el Origen hasta el Predio</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="image-placeholder">
+                        <img src="Red_final.png" alt="[imagen de la red]" class="rounded-lg shadow-md my-6">
+                    </div>
+                    <ol class="list-decimal pl-5 space-y-2">
+                        <li><strong>Origen (CO):</strong> La red nace en la **Oficina Central**, el centro de
+                            operaciones del proveedor.</li>
+                        <li><strong>Transporte (Aéreo o Subterráneo):</strong> El cableado se despliega en **Postes**
+                            (según ITU-T L.89) o en **Ductos** subterráneos (según ITU-T L.11).</li>
+                        <li><strong>Distribución y Acceso:** En puntos estratégicos, las **Cajas de Empalme** y los
+                                **Puntos de Acceso a la Red (NAP)** derivan la señal hacia las manzanas.</li>
+                        <li><strong>Conexión Final:** La red termina en la **Cámara de Entrada** del predio,
+                                conectándose al **Recinto de Equipos (SETI/SETU)**, cumpliendo la normativa RITEL.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Taller N° 4: Servicios Públicos Domiciliarios</span>
+                <span id="slide-number-8">8 / 11</span>
+            </div>
+        </section>
+
+        <!-- Diapositiva 9: Reglas de Conectividad y Topología -->
+        <section class="slide hidden" id="slide-9">
+            <div class="slide-content">
+                <h2>Garantía de Integridad: Matrices de Conectividad</h2>
+                <p class="mb-4 justify-text">Para validar el diseño, se implementaron reglas de topología basadas en
+                    matrices, asegurando que cada conexión sea lógica y normativamente correcta.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3>Matriz Línea-Línea</h3>
+                        <p class="text-sm mb-2">Define a través de qué nodos pueden conectarse los diferentes tipos de
+                            canalización.</p>
+                        <div class="image-placeholder">
+                            <img src="Matriz_linea_linea.png" alt="[imagen de la matriz linea linea]"
+                                class="rounded-lg shadow-md my-6">
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Matriz Línea-Nodo</h3>
+                        <p class="Matriz_linea_nodo.png">Define la cardinalidad (mínimos y máximos) de las conexiones
+                            entre líneas y nodos.</p>
+                        <div class="image-placeholder">
+                            <img src="Matriz_linea_nodo.png" alt="[imagen de la matriz linea nodo]"
+                                class="rounded-lg shadow-md my-6">
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-6 p-4 bg-blue-50 border border-blue-200 text-blue-800 rounded-lg text-center font-medium">
+                    Estas reglas convierten el diseño visual en un modelo lógico y validable, eliminando errores de
+                    conectividad.</p>
+            </div>
+            <div class="slide-footer">
+                <span>Taller N° 4: Servicios Públicos Domiciliarios</span>
+                <span id="slide-number-9">9 / 11</span>
+            </div>
+        </section>
+
+        <!-- Diapositiva 10: Conclusiones -->
+        <section class="slide hidden" id="slide-10">
+            <div class="slide-content">
+                <h2>Conclusiones del Diseño</h2>
+                <ul class="space-y-3">
+                    <li>
+                        <span class="font-bold text-blue-600">Factibilidad Normativa:</span> El diseño es plenamente
+                        compatible con el marco regulatorio nacional (RITEL) e integra las mejores prácticas de
+                        ingeniería de los estándares internacionales (UIT-T Serie L).
+                    </li>
+                    <li>
+                        <span class="font-bold text-blue-600">Eficiencia Operativa:</span> La ubicación estratégica de
+                        los nodos y la elección justificada entre rutas aéreas y subterráneas optimizan la cobertura,
+                        facilitan el mantenimiento y reducen costos a largo plazo.
+                    </li>
+                    <li>
+                        <span class="font-bold text-blue-600">Modelo Digital Integral:</span> La digitalización en un
+                        SIG con una geodatabase estructurada crea un **catastro de red funcional**, listo para ser
+                        integrado en sistemas de gestión territorial.
+                    </li>
+                    <li>
+                        <span class="font-bold text-blue-600">Escalabilidad y Sostenibilidad:</span> El diseño modular y
+                        estandarizado permite que la red sea **escalable**, preparándola para futuras ampliaciones o
+                        migraciones tecnológicas.
+                    </li>
+                </ul>
+            </div>
+            <div class="slide-footer">
+                <span>Taller N° 4: Servicios Públicos Domiciliarios</span>
+                <span id="slide-number-10">11 / 11</span>
+            </div>
+        </section>
+
+        <!-- Diapositiva 11: Final -->
+        <section class="slide hidden" id="slide-11">
+            <div class="slide-content text-center justify-center items-center">
+                <h1 class="text-6xl font-extrabold text-gray-800">¡Muchas Gracias!</h1>
+                <p class="mt-4 text-2xl text-gray-600">Quedamos a su disposición para cualquier pregunta.</p>
+            </div>
+            <div class="slide-footer">
+                <span>Taller N° 4: Servicios Públicos Domiciliarios</span>
+                <span id="slide-number-11">11 / 11</span>
+            </div>
+        </section>
+    </div>
+
+    <!-- Controles de Navegación -->
+    <div style="position: fixed; bottom: 30px; right: 30px; display: flex; gap: 10px;">
+        <button id="prevBtn" class="nav-button">Anterior</button>
+        <button id="nextBtn" class="nav-button">Siguiente</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = 11;
+        let currentSlide = 1;
+
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function updateSlides() {
+            slides.forEach(slide => {
+                slide.classList.add('hidden');
+            });
+            document.getElementById(`slide-${currentSlide}`).classList.remove('hidden');
+
+            prevBtn.disabled = currentSlide === 1;
+            nextBtn.disabled = currentSlide === totalSlides;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlides();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlides();
+            }
+        });
+
+        // Inicializar la presentación
+        updateSlides();
+    </script>
+
+</body>
+
+</html>
